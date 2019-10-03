@@ -54,7 +54,7 @@ input:checked + .pics {
     color: rgb(250, 234, 229);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 100px;
+    margin-top: 80px;
     height: 240px;
 }
 
@@ -83,6 +83,9 @@ li {
     padding: 20px;
     line-height: 60px;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 #buttons {
@@ -104,4 +107,15 @@ li {
     height: 50px;
     width: 80px;
     border-radius: 20px;
+    margin-left: 40px;
+}
+
+.wld {
+    margin-left: 20px;
+}
+
+#outcome {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 50px;
 }

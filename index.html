@@ -20,17 +20,17 @@
             <section class="choice">
                 <label>
                     <input name="choices" value="rock" type="radio" checked />
-                    <img class="pics" src="assets/rock.jpg" alt="Image of rock">
+                    <img class="pics" src="assets/rock.jpg" alt="Image of rock" />
                 </label>
 
                 <label>
                     <input name="choices" value="paper" type="radio" />
-                    <img class="pics" src="assets/paper.jpg" alt="Image of paper">
+                    <img class="pics" src="assets/paper.jpg" alt="Image of paper" />
                 </label>
 
                 <label>
                     <input name="choices" value="scissors" type="radio" />
-                    <img class="pics" src="assets/scissors.jpg" alt="Image of scissors">
+                    <img class="pics" src="assets/scissors.jpg" alt="Image of scissors" />
                 </label>
             </section>
         </div>
@@ -46,10 +46,10 @@
             </section>
 
             <section class="throws-section">
-                <div id="">
+                <div id="twoThrows">
                     <div class="throws">Computer throws: <span id="computer-throw"></span></div>
                     <div class="throws">You threw: <span id="user-throw"></span></div>
-                    <div><span id="outcome-message"></span></div>
+                    <div id="outcome"><span id="outcome-message"></span></div>
                 </div>
                 <div id="buttons">
                     <button class="buttons" id="play-button">Play a round!</button>
@@ -58,9 +58,9 @@
             </section>
 
             <section class="tallies-section">
-                <div id="wins">Wins: <span id="win"></span></div>
-                <div>Losses: <span id="lose"></span></div>
-                <div>Draws: <span id="draw"></span></div>
+                <div id="wins">Wins: <span class="wld" id="win"></span></div>
+                <div>Losses: <span class="wld" id="lose"></span></div>
+                <div>Draws: <span class="wld" id="draw"></span></div>
             </section>
         </div>
     </main>
