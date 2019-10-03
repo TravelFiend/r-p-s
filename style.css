@@ -46,6 +46,10 @@ input {
     display: none;
 }
 
+input:checked + .pics {
+    border: 10px solid green;
+}
+
 .bottom-wrapper {
     color: rgb(250, 234, 229);
     display: grid;
@@ -94,4 +98,10 @@ li {
     border-radius: 20px;
     background: rgb(250, 234, 229);
     color: #351313;
+}
+
+.smallPics {
+    height: 50px;
+    width: 80px;
+    border-radius: 20px;
 }

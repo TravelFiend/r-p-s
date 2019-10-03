@@ -15,7 +15,7 @@ test('should return win if player has rock and computer has scissors', function(
     const result = checkResult(playa, computa);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 'WIN');
+    assert.equal(result, 'win');
 });
 
 test('should return win if player has scissors and computer has paper', function(assert) {
@@ -28,7 +28,7 @@ test('should return win if player has scissors and computer has paper', function
     const result = checkResult(playa, computa);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 'WIN');
+    assert.equal(result, 'win');
 });
 
 test('should return win if player has paper and computer has rock', function(assert) {
@@ -41,7 +41,7 @@ test('should return win if player has paper and computer has rock', function(ass
     const result = checkResult(playa, computa);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 'WIN');
+    assert.equal(result, 'win');
 });
 
 test('should return lose if player has scissors and computer has rock', function(assert) {
@@ -54,7 +54,7 @@ test('should return lose if player has scissors and computer has rock', function
     const result = checkResult(playa, computa);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 'LOSE');
+    assert.equal(result, 'lose');
 });
 
 test('should return lose if player has paper and computer has scissors', function(assert) {
@@ -67,7 +67,7 @@ test('should return lose if player has paper and computer has scissors', functio
     const result = checkResult(playa, computa);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 'LOSE');
+    assert.equal(result, 'lose');
 });
 
 test('should return lose if player has scissors and computer has rock', function(assert) {
@@ -80,7 +80,7 @@ test('should return lose if player has scissors and computer has rock', function
     const result = checkResult(playa, computa);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 'LOSE');
+    assert.equal(result, 'lose');
 });
 
 test('should return draw if player has rock and computer has rock', function(assert) {
@@ -93,10 +93,10 @@ test('should return draw if player has rock and computer has rock', function(ass
     const result = checkResult(playa, computa);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 'DRAW');
+    assert.equal(result, 'draw');
 });
 
-test('should return draw if player has paper and computer has paper', function (assert) {
+test('should return draw if player has paper and computer has paper', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const playa = 'paper';
@@ -106,10 +106,10 @@ test('should return draw if player has paper and computer has paper', function (
     const result = checkResult(playa, computa);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 'DRAW');
+    assert.equal(result, 'draw');
 });
 
-test('should return draw if player has scissors and computer has scissors', function (assert) {
+test('should return draw if player has scissors and computer has scissors', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const playa = 'scissors';
@@ -119,5 +119,5 @@ test('should return draw if player has scissors and computer has scissors', func
     const result = checkResult(playa, computa);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 'DRAW');
+    assert.equal(result, 'draw');
 });

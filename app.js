@@ -1,9 +1,88 @@
-import checkResult, { getRandomThrow } from './check-checkResult.js';
+import checkResult, { getRandomThrow } from './get-random-throw.js';
 
 const computerThrow = document.getElementById('computer-throw');
 const userThrow = document.getElementById('user-throw');
-const wins = document.getElementById('win');
-const loses = document.getElementById('lose');
-const draws = document.getElementById('draw');
-const playButton = document.getElementById('draw');
-const resetButton = document.getElementById('draw');
+const winSpan = document.getElementById('win');
+const loseSpan = document.getElementById('lose');
+const drawSpan = document.getElementById('draw');
+const playButton = document.getElementById('play-button');
+const resetButton = document.getElementById('reset-button');
+const outcomeMessage = document.getElementById('outcome-message');
+
+const roc = document.createElement('img');
+roc.className = "smallPics";
+roc.src = './assets/rock.jpg';
+const pape = document.createElement('img');
+pape.className = "smallPics";
+pape.src = './assets/paper.jpg';
+const sciss = document.createElement('img');
+sciss.className = "smallPics";
+sciss.src = './assets/scissors.jpg';
+
+let winCount = 0;
+let loseCount = 0;
+let drawCount = 0;
+
+// set a function that shows an image of which throw was thrown by comp
+const showCompThrow = (randoThrow) => {
+    randoThrow = getRandomThrow();
+    if (randoThrow === 'rock'){
+        computerThrow.appendChild(roc);
+    } else if (randoThrow === 'paper'){
+        computerThrow.appendChild(pape);
+    } else {
+        computerThrow.appendChild(sciss);
+    }
+};
+
+// set a function that shows an image of which throw was thrown by user
+const showUserThrow = () => {
+    if (getRandomThrow() === 'rock') {
+        userThrow.appendChild(roc);
+    } else if (getRandomThrow() === 'paper') {
+        userThrow.appendChild(pape);
+    } else {
+        userThrow.appendChild(sciss);
+    }
+};
+
+
+const updateSpans = () => {
+    showCompThrow();
+    showUserThrow();
+    winSpan.textContent = winCount;
+    loseSpan.textContent = loseCount;
+    drawSpan.textContent = drawCount;
+};
+
+// set a function for reset button
+const hardReset = () => {
+    winCount = 0;
+    loseCount = 0;
+    drawCount = 0;
+    var images = document.getElementById('smallPics');
+    userThrow.removeChild('images');
+    computerThrow.removeChild('images');
+    updateSpans();
+};
+
+// set a function for playing a round
+const playARound = () => {
+
+    const userChoice = document.querySelector('input:checked').value;
+    const computerChoice = getRandomThrow();
+    const attempt = checkResult(userChoice, computerChoice);
+    console.log(computerChoice);
+    if (attempt === 'win'){
+        winCount++;
+    } else if (attempt === 'lose') {
+        loseCount++;
+    } else if (attempt === 'draw') {
+        drawCount++;
+    }
+    updateSpans();
+}
+
+// Event listeners
+resetButton.addEventListener('click', hardReset);
+playButton.addEventListener('click', playARound);

@@ -19,7 +19,7 @@
         <div class="top-wrapper">
             <section class="choice">
                 <label>
-                    <input name="choices" value="rock" type="radio" />
+                    <input name="choices" value="rock" type="radio" checked />
                     <img class="pics" src="assets/rock.jpg" alt="Image of rock">
                 </label>
 
@@ -47,8 +47,9 @@
 
             <section class="throws-section">
                 <div id="">
-                    <div class="throws">Computer throws: <span class="hidden" id="computer-throw"></span></div>
-                    <div class="throws">You threw: <span class="hidden" id="user-throw"></span></div>
+                    <div class="throws">Computer throws: <span id="computer-throw"></span></div>
+                    <div class="throws">You threw: <span id="user-throw"></span></div>
+                    <div><span id="outcome-message"></span></div>
                 </div>
                 <div id="buttons">
                     <button class="buttons" id="play-button">Play a round!</button>

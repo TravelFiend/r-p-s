@@ -10,11 +10,11 @@ export const getRandomThrow = () => {
 
 const checkResult = (player, computer) => {
     if (player === computer){
-        return 'DRAW';
+        return 'draw';
     } else if ((player === 'rock' && computer === 'scissors') || (player === 'paper' && computer === 'rock') || (player === 'scissors' && computer === 'paper')){
-        return 'WIN';
+        return 'win';
     } else {
-        return 'LOSE';
+        return 'lose';
     }
 };
 
