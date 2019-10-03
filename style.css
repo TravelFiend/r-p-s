@@ -1,9 +1,97 @@
+body {
+    background-image: url('assets/sunrise-photo.jpg');
+    background-size: cover;
+    font-family: ;
+    height: 100vh;
+}
+
 h1 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: #351313;
+    letter-spacing: 8px;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+img {
+    border: 2px solid #351313;
+}
+
+main {
+    font-family: Raleway, sans-serif;
 }
 
 .pics {
-    height: 200px;
-    width: 300px;
+    height: 250px;
+    width: 350px;
+    border-radius: 90px;
+}
+
+.choice {
+    display: flex;
+    justify-content: space-around;
+    color: #351313;
+}
+
+input {
+    display: none;
+}
+
+.bottom-wrapper {
+    color: rgb(250, 234, 229);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 100px;
+    height: 240px;
+}
+
+.rules-section {
+    border: 2px solid rgb(250, 234, 229);
+    border-radius: 40px;
+    padding: 10px;
+    line-height: 40px;
+}
+
+li {
+    font-size: 24px;
+}
+
+.throws-section {
+    border: 2px solid rgb(250, 234, 229);
+    border-radius: 40px;
+    padding: 20px;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+.tallies-section {
+    border: 2px solid rgb(250, 234, 229);
+    border-radius: 40px;
+    padding: 20px;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.buttons {
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
     border-radius: 20px;
+    background: rgb(250, 234, 229);
+    color: #351313;
 }
