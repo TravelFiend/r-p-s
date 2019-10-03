@@ -10,6 +10,52 @@
 </head>
 
 <body>
+    <header>
+        <h1>Rock, Paper, Scissors!</h1>
+    </header>
+
+    <section class="choice">
+        <label>
+            ROCK
+            <input name="choices" value="rock" type="radio" />
+            <img class="pics" src="assets/rock.jpg" alt="Image of rock">
+        </label>
+
+        <label>
+            PAPER
+            <input name="choices" value="paper" type="radio" />
+            <img class="pics" src="assets/paper.jpg" alt="Image of paper">
+        </label>
+
+        <label>
+            SCISSORS
+            <input name="choices" value="scissors" type="radio" />
+            <img class="pics" src="assets/scissors.jpg" alt="Image of scissors">
+        </label>
+    </section>
+
+    <section id="rules">
+        <h2>Rules:</h2>
+        <ul>
+            <li>Rock beats scissors</li>
+            <li>Paper beats rock</li>
+            <li>Scissors beats paper</li>
+        </ul>
+    </section>
+
+    <section class="throwsWrapper">
+        <div class="throws">Computer throws: <span class="hidden" id="computer-throw"></span></div>
+        <div class="throws">You threw: <span class="hidden" id="user-throw"></span></div>
+    </section>
+
+    <section class="talliesWrapper">
+        <div id="wins">Wins: <span id="win"></span></div>
+        <div>Losses: <span id="lose"></span></div>
+        <div>Draws: <span id="draw"></span></div>
+    </section>
+
+    <button id="play-button">Play a round!</button>
+    <button id="reset-button">Reset</button>
 
     <script type="module" src="app.js"></script>
 </body>

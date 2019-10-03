@@ -1,4 +1,4 @@
-import checkResult from '../check-result.js';
+import checkResult from '../get-random-throw.js';
 
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';

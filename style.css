@@ -1,0 +1,9 @@
+h1 {
+    text-transform: uppercase;
+}
+
+.pics {
+    height: 200px;
+    width: 300px;
+    border-radius: 20px;
+}
