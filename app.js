@@ -6,8 +6,6 @@ const drawSpan = document.getElementById('draw');
 const playButton = document.getElementById('play-button');
 const resetButton = document.getElementById('reset-button');
 const outcomeMessage = document.getElementById('outcome-message');
-const computerThrow = document.getElementsByClassName('computer-throw');
-const userThrow = document.getElementsByClassName('user-throw');
 const computerRockPic = document.getElementById('computer-rock-pic');
 const computerPaperPic = document.getElementById('computer-paper-pic');
 const computerScissorsPic = document.getElementById('computer-scissors-pic');
@@ -47,7 +45,7 @@ const hideComputerThrowImage = () => {
     computerRockPic.classList.add('hidden');
     computerPaperPic.classList.add('hidden');
     computerScissorsPic.classList.add('hidden');
-}
+};
 
 // set a function that shows an image of which throw was thrown by user
 const showUserThrowImg = (userPic) => {
@@ -66,7 +64,7 @@ const hideUserThrowImage = () => {
     userRockPic.classList.add('hidden');
     userPaperPic.classList.add('hidden');
     userScissorsPic.classList.add('hidden');
-}
+};
 
 // set a function for updating spans
 const updateSpans = () => {
@@ -98,7 +96,6 @@ const playARound = () => {
     const userChoice = document.querySelector('input:checked').value;
     const computerChoice = getRandomThrow();
     const attempt = checkResult(userChoice, computerChoice);
-    console.log(computerChoice);
     if (attempt === 'win'){
         winCount++;
     } else if (attempt === 'lose') {
