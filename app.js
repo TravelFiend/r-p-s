@@ -13,16 +13,6 @@ const userRockPic = document.getElementById('user-rock-pic');
 const userPaperPic = document.getElementById('user-paper-pic');
 const userScissorsPic = document.getElementById('user-scissors-pic');
 
-const roc = document.createElement('img');
-roc.className = 'smallPics';
-roc.src = './assets/rock.jpg';
-const pape = document.createElement('img');
-pape.className = 'smallPics';
-pape.src = './assets/paper.jpg';
-const sciss = document.createElement('img');
-sciss.className = 'smallPics';
-sciss.src = './assets/scissors.jpg';
-
 winSpan.textContent = 0;
 loseSpan.textContent = 0;
 drawSpan.textContent = 0;
